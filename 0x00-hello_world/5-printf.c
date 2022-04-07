@@ -1,10 +1,8 @@
 #include <stdio.h>
 /**
- *main - entry point
- *
- *my hello,printf task
- *
- *return: return 0 after pg execution
+ *main - Entry point
+ *My hello, printf task
+ *Return: return 1 after program execution
  */
 int main(void)
 {

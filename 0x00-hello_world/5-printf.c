@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
  *main - entry point
+ *
  *my hello,printf task
+ *
  *return: return 0 after pg execution
  */
 int main(void)

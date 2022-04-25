@@ -1,26 +1,40 @@
-#include "main.h"
+#include<stdio.h>
 
-/**
- * print_chessboard - print the chessboard, 2d array
- * @a: 2d array of chars
- *Return: void
- */
-void print_chessboard(char (*a)[8])
+void main()
 {
-	/*Declaring variables*/
-	int i, j;
+    int mat[12][12];
+    int i,j,row,col,sum=0;
+    printf("Enter the number of rows and columns for 1st matrix\n");
+    scanf("%d%d",&row,&col);
+    printf("Enter the elements of the matrix\n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            scanf("%d",&mat[i][j]);
+        }
+    }
+ 
+    printf("The matrix\n");
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            printf("%d\t",mat[i][j]);
+        }
+        printf("\n");
+    }
+    //To add diagonal elements
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            if(i==j)
+            {
+                sum=sum+mat[i][j];
+            }
+        }
+    }
 
-	i = 0;
-	while (i < 8) /*number repetitions*/
-	{
-		j = 0;
-		while (j < 8)
-		{
-			_putchar (a[i][j]);
-			j++;
-		}
-		_putchar ('\n'); /*print new line*/
-		i++; /*add +1*/
-	}
-
+    printf("The sum of diagonal elements of a square matrix = %d\n",sum);
 }

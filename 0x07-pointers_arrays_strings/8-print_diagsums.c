@@ -1,40 +1,32 @@
-#include<stdio.h>
+#include "main.h"
+#include <stdio.h>
 
-void main()
+/**
+ * print_diagsums - the sum of the two diagonals of a square matrix of integers
+ * @a: 2d array of chars
+ *@size: number matrix
+*Return: void
+ */
+
+void print_diagsums(int *a, int size)
 {
-    int mat[12][12];
-    int i,j,row,col,sum=0;
-    printf("Enter the number of rows and columns for 1st matrix\n");
-    scanf("%d%d",&row,&col);
-    printf("Enter the elements of the matrix\n");
-    for(i=0;i<row;i++)
-    {
-        for(j=0;j<col;j++)
-        {
-            scanf("%d",&mat[i][j]);
-        }
-    }
- 
-    printf("The matrix\n");
-    for(i=0;i<row;i++)
-    {
-        for(j=0;j<col;j++)
-        {
-            printf("%d\t",mat[i][j]);
-        }
-        printf("\n");
-    }
-    //To add diagonal elements
-    for(i=0;i<row;i++)
-    {
-        for(j=0;j<col;j++)
-        {
-            if(i==j)
-            {
-                sum=sum+mat[i][j];
-            }
-        }
-    }
+	/*Declaring variables*/
+	int i;
+	int sum1, sum2;
 
-    printf("The sum of diagonal elements of a square matrix = %d\n",sum);
+	sum1 = 0;
+	sum2 = 0;
+
+	i = 0;
+	while (i < size) /*number repetitions*/
+	{
+		/*sums for diagsums*/
+		sum1 = sum1 + *(a + i * size + i);
+		sum2 = sum2 + *(a + i * size + size - i - 1);
+
+		i++; /*add +1*/
+	}
+
+	printf("%i, %i\n", sum1, sum2);
+
 }

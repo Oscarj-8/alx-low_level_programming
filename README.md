@@ -1,2 +1,1 @@
-# alx-low_level_programming
-Starting to code in C
+For the third time , here we come pointers, strings and arrays

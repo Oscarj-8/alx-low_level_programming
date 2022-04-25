@@ -1,1 +1,1 @@
-For the third time , here we come pointers, strings and arrays
+Hellow C, here we come
